@@ -1,51 +1,8 @@
 <!Doctype html>
 <html>
-<script>
-// Get the battery!
-var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
+<body>
+<h1>This is page to check the battery percentage</h1>
+	<a href="Exp.html">click here</a>
+</body>
 
-// A few useful battery properties
-console.warn("Battery charging: ", battery.charging); // true
-console.warn("Battery level: ", battery.level); // 0.58
-console.warn("Battery discharging time: ", battery.dischargingTime);
-
-// Add a few event listeners
-battery.addEventListener("chargingchange", function(e) {
-	console.warn("Battery charge change: ", battery.charging);
-}, false);
-battery.addEventListener("chargingtimechange", function(e) {
-	console.warn("Battery charge time change: ", battery.chargingTime);
-}, false);
-battery.addEventListener("dischargingtimechange", function(e) {
-	console.warn("Battery discharging time change: ", battery.dischargingTime);
-}, false);
-battery.addEventListener("levelchange", function(e) {
-	console.warn("Battery level change: ", battery.level);
-}, false);
-</script>
-   <head>
-        <title>Page Title</title>
-<style>
-#battery{
-font-size:60px;
-color:green
-}
-</style>
-    </head>
-<script>
-navigator.getBattery().then(function(battery) 
-{ 
-var level = battery.level
-level=level*100+"%";
-
-document.getElementById('battery').innerHTML = level;
-});
-</script>
-    <body>
-    <div id="outerbody">
-        <div id="battery"></div>
-        </div>
-      <h1>Remaining Battery</h1>
-      <h2>This was an experiment</h2>
-   </body>
- </html>
+</html>
